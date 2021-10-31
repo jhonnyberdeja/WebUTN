@@ -1,11 +1,17 @@
-const express = require("express")
+const express = require("express");
 
-const app = express()
+const app = express();
+
+const path = require("path");
+
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','ejs');
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get("/", (req, res) => {
-    res.send("holaaaa")
-})
+    res.render("index.ejs")
+});
 
-app.listen(5500, () => {
-    console.log(`Example app listening at 5500`)
-  })
+app.listen(3500, () => {
+    console.log("Escuchando puerto 3500")
+});

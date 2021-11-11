@@ -19,3 +19,5 @@ app.use('/shop', productsRoutes);
 app.listen(3500, () => {
     console.log("Escuchando puerto 3500")
 });
+
+//http://localhost:3500/shop/allProducts

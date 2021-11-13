@@ -1,8 +1,15 @@
 const databaseConnection = require("../../config/database")
 
 const getAllProducts = (req, res)=>{
-
-    res.render('pages/see_products')
+    databaseConnection.query("SELECT * FROM products", (error, data) => {
+        if(error) {
+            console.log(error)
+        } else {
+            res.render('pages/see_products', {
+                products: data
+            })
+        }
+    })
 
 }
 

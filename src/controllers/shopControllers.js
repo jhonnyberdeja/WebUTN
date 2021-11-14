@@ -13,10 +13,31 @@ const getAllProducts = (req, res)=>{
 
 }
 
-const getHome = (req, res)=>{
+const getAddProducts = (req, res)=>{
 
-    res.render('index')
+    res.render('pages/load_products')
     
 }
 
-module.exports = {getAllProducts, getHome}
+const addNewProduct =(req,res)=>{
+    const nameee = req.body
+    console.log(nameee.name)
+    const {name,category,price,description,stock }= req.body
+
+    databaseConnection.query("INSERT INTO products (name,category,price,description ,stock)VALUES(?,?,?,?,?) ",[name,category,parseFloat(price),description,parseInt(stock)],(error,data)=>{
+        if(error){
+            console.log("Error al insertar un registro en la DB: " + error)
+        }else{
+    
+            res.render("pages/index")
+        }
+    })
+}
+
+const getHome = (req, res)=>{
+
+    res.render('pages/index')
+    
+}
+
+module.exports = {getAllProducts, getAddProducts, getHome, addNewProduct}

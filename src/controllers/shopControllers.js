@@ -34,10 +34,16 @@ const addNewProduct =(req,res)=>{
     })
 }
 
+const getLogin = (req, res)=>{
+
+    res.render('pages/login')
+    
+}
+
 const getHome = (req, res)=>{
 
     res.render('pages/index')
     
 }
 
-module.exports = {getAllProducts, getAddProducts, getHome, addNewProduct}
+module.exports = {getAllProducts, getAddProducts, getHome, getLogin, addNewProduct}

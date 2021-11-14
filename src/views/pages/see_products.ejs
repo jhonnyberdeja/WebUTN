@@ -3,7 +3,7 @@
 <head>
     <%-include('../parcials/head.ejs')%>
 </head>
-<body >
+<body style="background-color: burlywood;">
 
     <header><%-include('../parcials/nav.ejs')%></header>
 
@@ -13,7 +13,7 @@
                 <% products.forEach(product => { %>
                     <div class="col-sm-3">
                         <div class="card" style="margin-top: 10px;min-height: 160px;">
-                            <div class="card-body">
+                            <div class="card-body" style="background-color: burlywood;">
                               <h5 class="card-title"><%-product.name%></h5>
                               <p class="card-text"><%-product.description%></p>
                               <a href="#" class="btn btn-outline-primary">Agregar al carrito</a>

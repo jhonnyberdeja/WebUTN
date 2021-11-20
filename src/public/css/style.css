@@ -1,0 +1,19 @@
+#products,#home,#contacts,#car,#log-in{
+    font-weight: bolder; 
+    color:#222;
+}
+
+.background-background {
+    background-color: burlywood;
+}
+
+.footer-background {
+    background-color: #222;
+}
+h4{
+    color: black;
+}
+
+footer{
+    margin-top: 5%;
+}

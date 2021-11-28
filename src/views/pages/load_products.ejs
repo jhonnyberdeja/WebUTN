@@ -7,7 +7,7 @@
 
     <header><%-include('../parcials/nav.ejs')%></header>
 
-    <main class="container">
+    <main class="container margin">
         <form method="POST" action="/shop/addProduct/">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
@@ -29,10 +29,10 @@
                 <label for="stock" class="form-label">Stock</label>
                 <input type="text" class="form-control" id="stock" name="stock">
             </div>
-            <button type="submit" class="btn btn-primary">Agregar Producto</button>
+            <button type="submit" class="btn btn-dark">Agregar Producto</button>
         </form>
     </main>
-
+    <footer><%-include('../parcials/footer.ejs')%></footer>
     <%-include('../parcials/bootstrap.ejs')%>
 
 </body>

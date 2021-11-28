@@ -1,5 +1,7 @@
 const databaseConnection = require("../../config/database")
 
+const categories = require("../utils/category.json")
+
 const getAllProducts = (req, res)=>{
     databaseConnection.query("SELECT * FROM products", (error, data) => {
         if(error) {
@@ -41,8 +43,9 @@ const getLogin = (req, res)=>{
 }
 
 const getHome = (req, res)=>{
-
-    res.render('pages/index')
+    res.render('pages/index', {
+        data: categories
+    })
     
 }
 

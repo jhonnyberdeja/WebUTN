@@ -5,8 +5,8 @@
 </head>
 <body class="background-background">
     <header><%-include('../parcials/nav.ejs')%></header>
-    <div class="container mt-4">
-        <form>
+    <div class="container login">
+        <form method="GET" action="/shop/addProducts/">
             <div class="mb-3">
             <label class="form-label">User</label>
             <input type="email" class="form-control" aria-describedby="emailHelp">
@@ -21,6 +21,7 @@
 
         </form>
     </div>
+    <%-include('../parcials/footer.ejs')%>
 
     <%-include('../parcials/bootstrap.ejs')%>
 </body>
